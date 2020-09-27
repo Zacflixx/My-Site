@@ -28,7 +28,7 @@
 #start { font-size: 6vw; text-align: center;  font-family:  'Times New Roman', Times, serif;  text-shadow: 2px 3px 4px #00000035;}
 
 #hell1 { position: relative;  }
-#vec1 {float: center;}
+#vec1 {float: center; }
 #Desc { color: #09144198;font-size: 2vw;   }
 p {color: rgb(52, 48, 85);text-shadow: 4px 3px 4px #ffffff7b;  }
 span {color: rgba(245, 245, 245, 0.453);}
@@ -87,7 +87,7 @@ h1 {width: 100%; color: #112369;
    left: 0;
    bottom: 0;
    width: 16em;
-   background-color:#112369;
+   background-color:#0e1946;
    transform: translateX(-16em);
   }
 
@@ -114,7 +114,7 @@ h1 {width: 100%; color: #112369;
    color: #fff;
    text-transform: uppercase;
    text-align: center;
-   background-color: #353441;
+   background-color:#676676;
    cursor: pointer;
   }
 
@@ -136,7 +136,7 @@ h1 {width: 100%; color: #112369;
    height: 60px;
    color: #9dc6d1;
    line-height: 60px;
-   background-color: #353441;
+   background-color: #676676;
    transition: all 0.5s ease-in;
   }
 
@@ -145,8 +145,8 @@ h1 {width: 100%; color: #112369;
   }
 
   nav li:hover {
-   background: rgba(201, 221, 193, 0.412);
-   color: white;
+   background: rgba(245, 245, 245, 0.316);
+   color: black;
 
   }
 
