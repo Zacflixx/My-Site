@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <title>digonal nav</title>
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ <link rel="stylesheet" href="/CSS files/main.css">
+</head>
+
+<body>
+ <video id="videoBG" poster="poster.JPG" autoplay muted loop>
+  <source src="/Images/Ripples.mp4" type="video/mp4">
+ </video>
+ <nav class="menu-activea">
+  <h1 style="color: #9dc6d1;text-align: right;font-size: 9px ;";  >NAV_BAR &larr;</h1>
+  <ul>
+   <li>HOME</li>
+   <li>Background</li>
+   <li>Career</li>
+   <li>Music</li>
+   <li>3D Animation</li>
+   <li>Photography</li>
+   <li>Contact Me!</li>
+  </ul>
+ </nav>
+ <main>
+  <section>
+   <br><br><br>
+   <h1 id="start" >&larr;Hello, I'm <br> Isaac</h1>
+   <br>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+   <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium nulla culpa, deserunt cum voluptatem veritatis magnam unde illum ipsum dolorum magni iusto! Reiciendis porro a praesentium debitis. Laborum nihil, fugit quidem ullam repudiandae dolorum suscipit, maxime error totam ex laudantium facilis odit quia porro odio, impedit voluptatem! Quasi at facere ex qui, sint corrupti sed eaque provident, quisquam sapiente dicta! Accusantium, ipsa ducimus veritatis itaque quisquam fugit harum, sint corrupti voluptates expedita perspiciatis repellat, sit sequi temporibus ipsam. Ipsam voluptatum, sit accusamus sequi aperiam impedit nisi obcaecati sapiente omnis nam velit optio architecto! Earum dolorem, placeat ullam odio cumque nisi debitis enim natus deleniti, sint corporis id. Atque, quae. Ex, unde? Voluptatibus debitis corporis doloremque, itaque nobis ipsa, iure voluptates hic repellendus, omnis dolores necessitatibus ut cupiditate impedit expedita porro maiores earum quos magni dolore? Aspernatur ea vel perspiciatis voluptas aperiam facere dicta pariatur corrupti odio et, deleniti animi beatae ex sunt tenetur provident nesciunt voluptates officiis cum veniam, quis, labore explicabo ratione possimus. Doloribus, expedita itaque in quam eveniet fugiat, magnam at sunt consequatur error voluptatibus molestiae repudiandae asperiores, consequuntur suscipit. Deserunt, rem voluptatibus! Necessitatibus facere est fugit. Cupiditate rem expedita amet quos eligendi officiis sit necessitatibus laboriosam neque repudiandae dolorem accusamus hic repellendus at, eius nostrum voluptas voluptate enim delectus illo nobis, earum pariatur alias veniam? Quo saepe similique ullam soluta eveniet, doloremque quam recusandae illo ratione doloribus laborum, eum laboriosam, corrupti quia deleniti veniam nostrum nesciunt reiciendis. Ullam exercitationem accusamus maiores voluptatem omnis laborum amet facilis culpa illo illum. Vel atque impedit sunt officia, fugiat nobis ex tempore distinctio nostrum, perspiciatis alias fuga earum excepturi cumque quo nihil ratione eaque. Ipsa sed eos laboriosam veritatis. Distinctio accusantium dolores, esse nostrum praesentium commodi laboriosam! Dignissimos fugiat, dolorem culpa optio veniam fugit? Quasi voluptas molestias culpa. Assumenda totam perferendis ipsam consectetur eaque quas nostrum quam unde, debitis eveniet, ducimus, ut repudiandae corporis hic rerum optio suscipit enim ratione necessitatibus officia nobis est officiis minus. Praesentium earum excepturi voluptates, fugiat ipsam repudiandae dolor doloremque numquam nostrum consequatur recusandae rerum debitis ad eveniet sint odit iusto amet! Quibusdam recusandae facilis quos nostrum, perferendis, tempora repellat dolorum nemo laboriosam voluptates est quidem? Ullam, temporibus repellat pariatur ab nobis porro. Ipsam repellat reprehenderit eaque illum deleniti fuga sequi aliquid dolor ad maiores aperiam excepturi vel, voluptatum expedita omnis molestiae reiciendis at totam esse autem incidunt sapiente. Dolores quod omnis, vero culpa natus odio.</p>
+    
+  </section>
+ </main>
+ <script>
+  (function () {
+
+   var nav = $('nav'),
+    menu = $('nav h1'),
+    main = $('main'),
+    open = false,
+    hover = false;
+
+   menu.on('click', function () {
+    open = !open ? true : false;
+    nav.toggleClass('menu-active');
+    main.toggleClass('menu-active');
+    nav.removeClass('menu-hover');
+    main.removeClass('menu-hover');
+    console.log(open);
+   });
+   menu.hover(
+    function () {
+     if (!open) {
+      nav.addClass('menu-hover');
+      main.addClass('menu-hover');
+     }
+    }, function () {
+     nav.removeClass('menu-hover');
+     main.removeClass('menu-hover');
+    }
+   );
+
+  })();
+
+ </script>
+</body>
+
+</html>
