@@ -1,18 +1,18 @@
 #videoBG {
-    position:fixed;
-    z-index: -1;   
- }                                          /* send to back */
+  position: fixed;
+  z-index: -1;
+} /* send to back */
 @media (min-aspect-ratio: 16/9) {
-    #videoBG {
-        width:100%;
-        height: auto;
-    }
-}                                         /* min resize */
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+} /* min resize */
 @media (max-aspect-ratio: 16/9) {
-    #videoBG { 
-        width:auto;
-        height: 100%;
-    }                                         /* max resize */
+  #videoBG {
+    width: auto;
+    height: 100%;
+  } /* max resize */
 }
 /* @media (max-width: 767px) {
     #videoBG {
@@ -22,286 +22,276 @@
         background: url('poster.jpg');
         background-size: cover;
     }
- }          */   /* make static for mobile display */
+ }          */ /* make static for mobile display */
 
-.menu1 { color: rgb(29, 29, 138); font-size: 20px;text-align: center;}
-#start { font-size: 6vw; text-align: center;  font-family:  'Times New Roman', Times, serif;  text-shadow: 2px 3px 4px #00000035;}
-
-#hell1 { position: relative;  }
-#vec1 {float: center; }
-#Desc { color: #09144198;font-size: 2vw;   }
-p {color: rgb(52, 48, 85);text-shadow: 4px 3px 4px #ffffff7b;  }
-span {color: rgba(245, 245, 245, 0.453);}
-
-#greeting {font-size: 3cm; text-align: center; color: rgba(245, 245, 245, 0.837); font-family:  'Times New Roman', Times, serif;  text-shadow: 9px 3px 4px #00000035;  }
-.st1 {color: rgba(140, 140, 194, 0.316); 
--webkit-text-stroke-width: 0.2px;                            /* add stroke to text */
-  -webkit-text-stroke-color: rgb(231, 222, 222); }
-
-h1 {width: 100%; color: #112369;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid rgba(245, 245, 245, 0.166); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .1em; /* Adjust as needed */
-  animation: 
-    typing 5s steps(40, end),
-    blink-caret .75s step-end ;
+#Vidz {width="420cm"; height="420cm"; }
+.menu1 {
+  color: rgb(29, 29, 138);
+  font-size: 20px;
+  text-align: center;
+}
+#start {
+  font-size: 6vw;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 2px 3px 4px #00000035;
 }
 
- /* the text typing */
+#hell1 {
+  position: relative;
+}
+#vec1 {
+  float: center;
+}
+#Desc {
+  color: #09144198;
+  font-size: 2vw;
+}
+p {
+  color: rgb(52, 48, 85);
+  text-shadow: 4px 3px 4px #ffffff7b;
+}
+span {
+  color: rgba(245, 245, 245, 0.453);
+}
+
+#greeting {
+  font-size: 3cm;
+  text-align: center;
+  color: rgba(245, 245, 245, 0.837);
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 9px 3px 4px #00000035;
+}
+.st1 {
+  color: rgba(140, 140, 194, 0.316);
+  -webkit-text-stroke-width: 0.2px; /* add stroke to text */
+  -webkit-text-stroke-color: rgb(231, 222, 222);
+}
+
+h1 {
+  width: 100%;
+  color: #112369;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgba(245, 245, 245, 0.166); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 5s steps(40, end), blink-caret 0.75s step-end;
+}
+
+/* the text typing */
 /* @keyframes typing {                   
   from { width: 0 }
   to { width: 100% }
 }  */
 
-  html,
-  body {
-   height: 100%;
-  }
+html,
+body {
+  height: 100%;
+}
 
-  * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-   font-family: 'Roboto Condensed', sans-serif;
-   line-height: 1.7;
-   perspective-origin: 0% 50%;
-   perspective: 800px;
-   background: #5f0f0f;
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.7;
+  perspective-origin: 0% 50%;
+  perspective: 800px;
+  background: #5f0f0f;
+}
 
-  }
+nav,
+main {
+  transition: transform 150ms ease-out;
+}
 
-  nav,
-  main {
-   transition: transform 150ms ease-out;
-  }
+nav {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16em;
+  background-color: #0e1946;
+  transform: translateX(-16em);
+}
 
-  nav {
-   z-index: 100;
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   width: 16em;
-   background-color:#0e1946;
-   transform: translateX(-16em);
-  }
+nav.menu-active {
+  transform: translateX(0);
+}
 
-  nav.menu-active {
-   transform: translateX(0);
-  }
+nav.menu-hover {
+  transform: translateX(-15em);
+}
 
-  nav.menu-hover {
-   transform: translateX(-15em);
-  }
+nav h1 {
+  z-index: 100;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -65px;
+  height: 60px;
+  width: 65px;
+  line-height: 60px;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #676676;
+  cursor: pointer;
+}
 
-  nav h1 {
-   z-index: 100;
-   display: block;
-   position: fixed;
-   top: 0;
-   right: -65px;
-   height: 60px;
-   width: 65px;
-   line-height: 60px;
-   font-size: 0.8em;
-   font-weight: 300;
-   letter-spacing: 1px;
-   color: #fff;
-   text-transform: uppercase;
-   text-align: center;
-   background-color:#676676;
-   cursor: pointer;
-  }
+nav h1:hover {
+  color: #353441;
+  background: #fff;
+}
 
-  nav h1:hover {
-   color: #353441;
-   background: #fff;
-  }
+nav ul {
+  margin: 0;
+  padding: 0;
+}
 
-  nav ul {
-   margin: 0;
-   padding: 0;
-   
-  }
+nav li {
+  display: inline-block;
+  padding: 0 1em;
+  width: 100%;
+  height: 60px;
+  color: #9dc6d1;
+  line-height: 60px;
+  background-color: #676676;
+  transition: all 0.5s ease-in;
+}
 
-  nav li {
-   display: inline-block;
-   padding: 0 1em;
-   width: 100%;
-   height: 60px;
-   color: #9dc6d1;
-   line-height: 60px;
-   background-color: #676676;
-   transition: all 0.5s ease-in;
-  }
+nav li:nth-of-type(2n) {
+  background-color: #112369;
+}
 
-  nav li:nth-of-type(2n) {
-   background-color: #112369;
-  }
+nav li:hover {
+  background: rgba(245, 245, 245, 0.316);
+  color: black;
+}
 
-  nav li:hover {
-   background: rgba(245, 245, 245, 0.316);
-   color: black;
+main {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(ji.jpeg);
+  transform-origin: 0% 50%;
+  background-size: cover;
+}
 
-  }
+main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent, rgba(33, 33, 45, 0.5));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
 
-  main {
-   z-index: 0;
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   display: flex;
-   align-items: center;
-   overflow: hidden;
-   background-image: url(ji.jpeg);
-   transform-origin: 0% 50%;
-   background-size: cover;
-  }
+main.menu-active {
+  border-radius: 0.001px;
+  transform: translateX(16em) rotateY(15deg);
+}
 
-  main:after {
-   content: '';
-   display: block;
-   position: absolute;
-   z-index: 1;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   background: linear-gradient(to right, transparent, rgba(33, 33, 45, .5));
-   visibility: hidden;
-   opacity: 0;
-   transition: opacity 150ms ease-out, visibility 0s 150ms;
-  }
+main.menu-active:after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 150ms ease-out, visibility 0s;
+}
 
-  main.menu-active {
-   border-radius: 0.001px;
-   transform: translateX(16em) rotateY(15deg);
-  }
+main.menu-hover {
+  border-radius: 0.001px;
+  transform: translateX(1em) rotateY(1deg);
+}
+a {
+  color: #9dc6d1;
+}
 
-  main.menu-active:after {
-   visibility: visible;
-   opacity: 1;
-   transition: opacity 150ms ease-out, visibility 0s;
-  }
+main section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 1em 1em;
+  max-width: 90%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
-  main.menu-hover {
-   border-radius: 0.001px;
-   transform: translateX(1em) rotateY(1deg);
-  }
-a {color:#9dc6d1;}
+section h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+}
 
-  main section {
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   margin: auto;
-   padding: 1em 1em;
-   max-width: 90%;
-   overflow: auto;
-   background-color: rgba(255, 255, 255, .5);
-  }
+section p {
+  display: inline-block;
+  margin: 16px 0;
+}
 
-  section h1 {
-   font-weight: 800;
-   text-transform: uppercase;
-   font-size: 2em;
-  }
-
-  section p {
-   display: inline-block;
-   margin: 16px 0;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+/* 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-::selection{
+::selection {
   color: #fff;
   background: #6665ee;
 }
-.skill-bars{
- float: center;
+.skill-bars {
+  float: center;
   padding: 25px 30px;
   width: 600px;
   background: #fff;
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-.skill-bars .bar{
+.skill-bars .bar {
   margin: 20px 0;
 }
-.skill-bars .bar:first-child{
+.skill-bars .bar:first-child {
   margin-top: 0px;
 }
-.skill-bars .bar .info{
+.skill-bars .bar .info {
   margin-bottom: 5px;
 }
-.skill-bars .bar .info span{
+.skill-bars .bar .info span {
   font-weight: 500;
   font-size: 17px;
   opacity: 0;
   animation: showText 0.5s 1s linear forwards;
 }
 @keyframes showText {
-  100%{
+  100% {
     opacity: 1;
   }
 }
-.skill-bars .bar .progress-line{
- 
+.skill-bars .bar .progress-line {
   height: 10px;
   width: 100%;
   background: #f0f0f0;
@@ -309,40 +299,40 @@ a {color:#9dc6d1;}
   transform: scaleX(0);
   transform-origin: left;
   border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-              0 1px rgba(255,255,255,0.8);
-  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 @keyframes animate {
-  100%{
+  100% {
     transform: scaleX(1);
   }
 }
-.bar .progress-line span{
+.bar .progress-line span {
   height: 100%;
   position: absolute;
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
   background: #5a48c0;
-  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
-.bar .progress-line.html span{
+.bar .progress-line.html span {
   width: 90%;
 }
-.bar .progress-line.css span{
+.bar .progress-line.css span {
   width: 60%;
 }
-.bar .progress-line.jquery span{
+.bar .progress-line.jquery span {
   width: 85%;
 }
-.bar .progress-line.python span{
+.bar .progress-line.python span {
   width: 50%;
 }
-.bar .progress-line.mysql span{
+.bar .progress-line.mysql span {
   width: 75%;
 }
-.progress-line span::before{
+.progress-line span::before {
   position: absolute;
   content: "";
   top: -10px;
@@ -356,7 +346,7 @@ a {color:#9dc6d1;}
   opacity: 0;
   animation: showText2 0.5s 1.5s linear forwards;
 }
-.progress-line span::after{
+.progress-line span::after {
   position: absolute;
   top: -28px;
   right: 0;
@@ -370,22 +360,22 @@ a {color:#9dc6d1;}
   animation: showText2 0.5s 1.5s linear forwards;
 }
 @keyframes showText2 {
-  100%{
+  100% {
     opacity: 1;
   }
 }
-.progress-line.html span::after{
+.progress-line.html span::after {
   content: "90%";
 }
-.progress-line.css span::after{
+.progress-line.css span::after {
   content: "60%";
 }
-.progress-line.jquery span::after{
+.progress-line.jquery span::after {
   content: "85%";
 }
-.progress-line.python span::after{
+.progress-line.python span::after {
   content: "50%";
 }
-.progress-line.mysql span::after{
+.progress-line.mysql span::after {
   content: "75%";
-}
+} */
